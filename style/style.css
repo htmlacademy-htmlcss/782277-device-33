@@ -449,11 +449,11 @@ body {
 }
 
 .slider-prev {
-  background-image: url("../images/icon/mark-left.svg");
+  background-image: url("../images/icon/button-left.svg");
 }
 
 .slider-next {
-  background-image: url("../images/icon/mark-right.svg");
+  background-image: url("../images/icon/button-right.svg");
 }
 
 .slider-pagination {
@@ -984,3 +984,106 @@ body {
 
 /* catalog */
 
+.breadcrumbs-link {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.filter-title {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filter-form-title {
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.filter-form-label {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.sort-title {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sort-select {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.catalog-item-link {
+  text-decoration: none;
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-item-cost {
+  line-height: 21px;
+  text-align: right;
+  color: #444444;
+}
+
+.control-button {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.pagination-link {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.pagination-link-back,
+.pagination-link-forward {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 1;
+}
