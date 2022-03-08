@@ -16,7 +16,7 @@
 
       <form class="header-search-form" action="https://echo.htmlacademy.ru/" method="get">
         <label class="visually-hidden" for="search-input">Введите текс поиска</label>
-        <input class="search-form-input" id="search-input" type="search" name="search-form-request" placeholder="Текст поиска">
+        <input class="search-form-input" id="search-input" type="text" name="search-form-request" placeholder="Текст поиска">
         <button class="search-form-button" type="submit">Найти</button>
       </form>
 
@@ -266,12 +266,13 @@
       <div class="delivery page-container">
         <a class="delivery-button button-style" href="#">Доставим редкий товар под заказ</a>
         <span class="delivery-tooltip">
-          <button class="delivery-tooltip-button button-style" type="button">
+          <button class="delivery-tooltip-button button-style" type="button" aria-labelledby="delivery-tooltip-label">
             <span class="visually-hidden">Информация о доставке</span>
             <svg class="delivery-tooltip-img" width="2" height="12" viewBox="0 0 2 12" fill="#000" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 0H0v2h2V0ZM2 4H0v8h2V4Z"/>
             </svg>
           </button>
+          <span class="delivery-tooltip-text" id="delivery-tooltip-label" role="tooltip"></span>
         </span>
       </div>
 
@@ -368,5 +369,69 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal-container modal-close">
+      <div class="modal modal-order">
+        <button class="modal-close-button button-style">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <section class="modal-content">
+          <h2 class="modal-title raleway-title">Доставка под заказ</h2>
+          <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <p class="order-form-row">
+              <label class="input-wrapper order-form-name order-form-label">
+                <span class="order-form-title">Ваше имя:</span>
+                <input class="order-form-input input-name" type="text" name="order-form-name" placeholder="Введите имя">
+              </label>
+
+              <span class="input-wrapper order-form-email">
+                <label class="order-form-label">
+                  <span class="order-form-title">Ваш e-mail:</span>
+                  <input class="order-form-input input-email" type="email" name="order-form-email" placeholder="Введите e-mail" value="почта" aria-labelledby="input-messege-error">
+                </label>
+                <span class="order-form-text order-form-text-error" id="input-messege-error" aria-hidden="true">Забавный у вас адрес</span>
+              </span>
+            </p>
+
+            <p class="order-form-row">
+              <label class="input-wrapper order-form-product order-form-label">
+                <span class="order-form-title">Что нужно привезти:</span>
+                <input class="order-form-input input-product" type="text" name="order-form-product" placeholder="В свободной форме">
+              </label>
+
+              <span class="input-wrapper order-form-quantity">
+                <label class="order-form-label" for="input-quantity">
+                  <span class="order-form-title">Количество:</span>
+                </label>
+
+                <span class="modal-tooltip">
+                  <button class="modal-tooltip-button button-style" type="button" aria-labelledby="modal-tooltip-label">
+                    <span class="visually-hidden">Показать дополнительную информацию</span>
+                    <svg class="delivery-tooltip-img" width="2" height="12" viewBox="0 0 2 12" fill="#000" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 0H0v2h2V0ZM2 4H0v8h2V4Z"/>
+                    </svg>
+                  </button>
+                  <span class="modal-tooltip-text" id="modal-tooltip-label" role="tooltip"></span>
+                </span>
+
+                <input class="order-form-input input-quantity" id="input-quantity" type="number" name="order-form-quantity" value="1">
+
+                <button class="button-input button-remove button-style" type="button">
+                  <span class="visually-hidden">Убрать</span>
+                </button>
+                <button class="button-input button-add button-style" type="button">
+                  <span class="visually-hidden">Добавить</span>
+                </button>
+              </span>
+            </p>
+
+            <button class="button order-form-button">Отправить</button>
+
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

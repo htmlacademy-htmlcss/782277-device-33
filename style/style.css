@@ -1332,6 +1332,7 @@ body {
 }
 
 .catalog-item {
+  position: relative;
   min-height: 452px;
 }
 
@@ -1364,6 +1365,26 @@ body {
   line-height: 21px;
   text-align: right;
   color: #444444;
+}
+
+.catalog-button-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 360px;
+  height: 380px;
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+.catalog-button {
+  width: 220px;
+  margin: auto;
+  padding: 10px 5px;
+}
+
+.catalog-item:hover .catalog-button-wrapper {
+  display: flex;
 }
 
 /* навигация по результатам поиска */
@@ -1437,4 +1458,195 @@ body {
   text-transform: uppercase;
   color: #000000;
   opacity: 1;
+}
+
+/* модальное окно */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+/* использовать класс для закрытия модального окна */
+
+.modal-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  background-color: #FFFFFF;
+}
+
+.modal-order {
+  width: 920px;
+  min-height: 568px;
+  padding: 62px 70px;
+  border: 10px solid #000000;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 73px;
+  right: 70px;
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-image: url("../images/icon/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-title {
+  margin-bottom: 42px;
+}
+
+/* форма заказа в модальном окне */
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.order-form-name {
+  width: 360px;
+}
+
+.order-form-email {
+  width: 360px;
+}
+
+.order-form-product {
+  width: 540px;
+}
+
+.order-form-quantity {
+  width: 180px;
+}
+
+.order-form-title {
+  display: block;
+  margin-bottom: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.input-wrapper {
+  position: relative;
+  display: block;
+}
+
+.order-form-input {
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  padding: 20px;
+  padding-right: 40px;
+  font-family: "Rubik",sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  border: 0;
+  background-color: #F0F0F0;
+}
+
+.input-name {
+  background-image: url("../images/icon/man-order.svg");
+  background-repeat: no-repeat;
+  background-position: center  right 20px;
+  background-size: 13px 12px;
+}
+
+.input-email {
+  background-image: url("../images/icon/mail.svg");
+  background-repeat: no-repeat;
+  background-position: center  right 20px;
+  background-size: 13px 12px;
+}
+
+.input-email:invalid {
+  box-shadow: inset 0 0 0 2px #FF3D3D;
+}
+
+.input-quantity {
+  padding: 20px 60px;
+  text-align: center;
+  appearance: textfield;
+}
+
+.input-quantity::-webkit-outer-spin-button,
+.input-quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.order-form-text {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.order-form-text-error {
+  color: #FF3D3D;
+}
+
+.modal-tooltip {
+  position: absolute;
+  top: -4px;
+  right: 33px;
+}
+
+.modal-tooltip-button {
+  width: 26px;
+  height: 26px;
+  background-color: #FFE17F;
+  border-radius: 50%;
+}
+
+.button-input {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-remove {
+  left: 18px;
+  bottom: 18px;
+  background-image: url("../images/icon/minus.svg");
+}
+
+.button-add {
+  right: 17px;
+  bottom: 18px;
+  background-image: url("../images/icon/plus.svg");
+}
+
+.order-form-button {
+  width: 200px;
+  padding: 10px 5px;
 }
