@@ -528,30 +528,36 @@ body {
 
 .slider {
   position: relative;
-  margin-bottom: 71px;
+  margin-bottom: 70px;
 }
 
 .slide-list {
+  position: relative;
   color: #444444;
   background-image: linear-gradient(#FFE17F 150px,#FFFFFF 150px);
+  counter-reset: slide-count;
 }
 
 .slide-item {
-  position: relative;
   display: flex;
   justify-content: space-between;
+  counter-increment: slide-count;
+}
+
+.slide-item-active {
+  display: flex;
 }
 
 .slide-item::before {
   position: absolute;
-  top: 82px;
+  top: 8px;
   right: 48px;
-  content: "01";
+  content: "0" counter(slide-count);
   width: 250px;
   min-height: 180px;
   font-style: normal;
   font-size: 180px;
-  line-height: 30px;
+  line-height: 180px;
   font-weight: 700;
   text-align: right;
   color: #FFFFFF;
@@ -586,6 +592,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 20px;
+}
+
+.slide-item:last-child .slide-description {
+  column-gap: 40px;
 }
 
 .slide-description-wrapper {
@@ -758,13 +768,17 @@ body {
   margin-bottom: 34px;
 }
 
-.advantages-pagination-active,
-.advantages-pagination-active .button::before,
-.advantages-pagination-active .advantages-button {
+.advantages-pagination-active {
   align-self: stretch;
-  content: none;
-  color: #FFE17F;
   background-color: #000000;
+}
+
+.advantages-pagination-active .advantages-button {
+  color: #FFE17F;
+}
+
+.advantages-pagination-active .button::before {
+  content: none;
 }
 
 .advantages-button {
@@ -776,7 +790,8 @@ body {
 .advantages-list {
   width: 872px;
   min-height: 391px;
-  padding: 73px 62px 73px 116px;
+  padding: 73px;
+  padding-left: 116px;
 }
 
 .advantage-item {
@@ -786,29 +801,29 @@ body {
 .advantage-item::after {
   position: absolute;
   content: "";
-  width: 196px;
-  height: 172px;
+  width: 200px;
+  height: 200px;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: center;
 }
 
 .advantage-item-delivery::after {
-  top: 0;
-  right: 0;
+  top: -14px;
+  right: -43px;
   background-image: url("../images/icon/delivery-man.svg");
   background-size: 136px 164px;
 }
 
-.advantage-item-warranty {
-  top: 0;
-  right: 0;
+.advantage-item-warranty::after {
+  top: -12px;
+  right: -61px;
   background-image: url("../images/icon/warranty.svg");
   background-size: 171px 195px;
 }
 
-.dvantage-item-credit {
-  top: 0;
-  right: 0;
+.advantage-item-credit::after {
+  top: -14px;
+  right: -67px;
   background-image: url("../images/icon/credit.svg");
   background-size: 156px 188px;
 }
@@ -1146,6 +1161,7 @@ body {
 .footer-telephone {
   grid-area: telephone;
   justify-self: end;
+  align-self: start;
   padding: 10px 4px;
   font-size: 16px;
   line-height: 20px;
@@ -1674,6 +1690,7 @@ body {
 /* модальное окно */
 
 .modal-container {
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
