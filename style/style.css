@@ -155,10 +155,11 @@ body {
 /* header общие стили */
 
 .main-header {
+  z-index: 1;
   display: grid;
   grid-template-columns: 534px 516px;
   grid-template-areas:
-    "logo        .       "
+    "header-logo .       "
     "search-form user-nav"
     "site-nav    site-nav";
   column-gap: 20px;
@@ -172,7 +173,7 @@ body {
 /* первый ряд header логотип девайс */
 
 .header-logo {
-  grid-area: logo;
+  grid-area: header-logo;
   width: 145px;
   margin-left: 15px;
 }
@@ -430,6 +431,7 @@ body {
 }
 
 .site-navigation-item {
+  position: relative;
   margin-right: 16px;
 }
 
@@ -444,6 +446,70 @@ body {
 .site-navigation-link {
   display: block;
   padding: 15px;
+}
+
+.header-catalog-button {
+ padding-right: 68px;
+}
+
+.header-catalog-button::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icon/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.site-navigation-item:hover .header-catalog-button::after,
+.site-navigation-item:focus-within .header-catalog-button::after {
+  background-image: url("../images/icon/minus.svg");
+}
+
+.site-navigation-item:hover .header-catalog-list,
+.site-navigation-item:focus-within .header-catalog-list{
+  display: flex;
+}
+
+/* стилизация выпадающего каталога */
+
+.header-catalog-list {
+  z-index: -1;
+  position: absolute;
+  top: 32px;
+  left: -45px;
+  display: none;
+  width: 1160px;
+  min-height: 180px;
+  padding: 33px 60px;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #FFE17F;
+}
+
+.header-catalog-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-catalog-item:nth-child(2) {
+  margin-right: 14px;
+}
+
+.header-catalog-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 200px;
+}
+
+.column-item {
+  margin-bottom: 18px;
 }
 
 .header-catalog-link {
@@ -1030,15 +1096,15 @@ body {
   display: grid;
   grid-template-columns: 240px 468px 240px;
   grid-template-areas:
-    "logo    .          .        "
-    "address footer-nav telephone"
-    ".       social     partner  ";
+    "footer-logo .          .        "
+    "address     footer-nav telephone"
+    ".           social     partner  ";
   column-gap: 106px;
   row-gap: 30px;
 }
 
 .footer-logo {
-  grid-area: logo;
+  grid-area: footer-logo;
 }
 
 .footer-address {
@@ -1478,20 +1544,23 @@ body {
 }
 
 .catalog-item-link {
+  display: grid;
+  grid-template-columns: 226px 100px;
+  grid-template-areas:
+    "catalog-image catalog-image"
+    "catalog-title catalog-cost ";
+  column-gap: 34px;
+  row-gap: 32px;
   text-decoration: none;
 }
 
 .catalog-item-image {
-  margin-bottom: 32px;
-}
-
-.catalog-item-description {
-  display: flex;
-  justify-content: space-between;
+  grid-area: catalog-image;
 }
 
 .catalog-item-title {
-  max-width: 226px;
+  grid-area: catalog-title;
+  width: 226px;
   margin: 0;
   font-size: 18px;
   line-height: 20px;
@@ -1501,7 +1570,8 @@ body {
 }
 
 .catalog-item-cost {
-  max-width: 100px;
+  grid-area: catalog-cost;
+  width: 100px;
   margin: 0;
   line-height: 21px;
   text-align: right;
