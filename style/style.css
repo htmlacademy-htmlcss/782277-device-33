@@ -311,6 +311,111 @@ body {
   padding-left: 42px;
 }
 
+/* стили для popover */
+
+/* использовать для закрытия поповера */
+
+.popover-close {
+  display: none;
+}
+
+.popover-cart {
+  z-index: 1;
+  position: absolute;
+  top: 42px;
+  right: -78px;
+  width: 320px;
+  min-height: 300px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.popover-cart::before {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  content: "";
+  width: 14px;
+  height: 6px;
+  background-image: url("../images/icon/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: translateX(-50%);
+}
+
+.popover-content {
+  height: 100%;
+}
+
+.card-item {
+  position: relative;
+  padding: 20px;
+}
+
+.card-item + .card-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-link {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.card-img {
+  width: 39px;
+  margin-right: 23px;
+}
+
+.card-title {
+  width: 158px;
+  margin: 0;
+}
+
+.card-item-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 14px;
+  height: 14px;
+  padding: 2px;
+  background-image: url("../images/icon/cross-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-total {
+  display: flex;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 12px 20px;
+  background-color: #1A1A1A;
+}
+
+.total-goods {
+  width: 120px;
+  margin: 0;
+}
+
+.total-cost {
+  width: 150px;
+  margin: 0;
+  text-align: right;
+}
+
+.card-button {
+  width: 280px;
+  min-height: 50px;
+  margin: 20px;
+  padding: 14px 20px;
+  background-color: #FFFFFF;
+}
+
 
 /* третий ряд header каталог и меню сайта */
 
