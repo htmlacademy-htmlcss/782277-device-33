@@ -75,7 +75,7 @@
                       <span class="cost-quantity">2000 ₽</span>
                     </p>
                   </div>
-                  <button class="card-button button-style" type="button">Открыть корзину</button>
+                  <a class="card-button button-style" href="#">Открыть корзину</a>
                 </div>
               </div>
             </li>
@@ -86,7 +86,7 @@
       <nav class="site-navigation">
         <ul class="site-navigation-list reset-list">
           <li class="site-navigation-item">
-            <a class="header-catalog-button button-style">Каталог товаров</a>
+            <a class="header-catalog-button button-style" href="">Каталог товаров</a>
 
             <ul class="header-catalog-list reset-list">
               <li class="header-catalog-item">
@@ -95,7 +95,7 @@
                     <a class="header-catalog-link" href="#">Виртуальная реальность</a>
                   </li>
                   <li class="column-item">
-                    <a class="header-catalog-link catalog-link-active" href="#">Моноподы для cелфи</a>
+                    <a class="header-catalog-link catalog-link-active">Моноподы для cелфи</a>
                   </li>
                   <li class="column-item">
                     <a class="header-catalog-link" href="#">Экшн-камеры</a>
@@ -142,7 +142,7 @@
 
         <ul class="breadcrumbs reset-list">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Главная</a>
+            <a class="breadcrumbs-link" href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="#">Каталог товаров</a>
@@ -165,7 +165,7 @@
                   <button class="cost-scale-pin pin-min" type="button">
                     <span class="visually-hidden">Изменение минимальной цены</span>
                   </button>
-                  <div class="cost-scale-level" style="left: 0; width: 55%;"></div>
+                  <div class="cost-scale-level" style="left: 9px; width: 50%;"></div>
                   <button class="cost-scale-pin pin-max" type="button">
                     <span class="visually-hidden">Изменение максимальной цены</span>
                   </button>
@@ -190,35 +190,35 @@
                   <label class="filter-form-label">
                     <input class="filter-form-checkbox visually-hidden" type="checkbox" name="black" checked>
                     <span class="control-checkbox"></span>
-                    Черный
+                    <span>Черный</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="filter-form-label">
                     <input class="filter-form-checkbox visually-hidden" type="checkbox" name="white" checked>
                     <span class="control-checkbox"></span>
-                    Белый
+                    <span>Белый</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="filter-form-label">
                     <input class="filter-form-checkbox visually-hidden" type="checkbox" name="blue">
                     <span class="control-checkbox"></span>
-                    Синий
+                    <span>Синий</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="filter-form-label">
                     <input class="filter-form-checkbox visually-hidden" type="checkbox" name="red">
                     <span class="control-checkbox"></span>
-                    Красный
+                    <span>Красный</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="filter-form-label">
                     <input class="filter-form-checkbox visually-hidden" type="checkbox" name="pink">
                     <span class="control-checkbox"></span>
-                    Розовый
+                    <span>Розовый</span>
                   </label>
                 </li>
               </ul>
@@ -231,14 +231,14 @@
                   <label class="filter-form-label">
                     <input class="filter-form-radio visually-hidden" type="radio" name="bluetooth" value="yes" checked>
                     <span class="control-radio"></span>
-                    Есть
+                    <span>Есть</span>
                   </label>
                 </li>
                 <li class="filter-form-item">
                   <label class="filter-form-label">
                     <input class="filter-form-radio visually-hidden" type="radio" name="bluetooth" value="no">
                     <span class="control-radio"></span>
-                    Нет
+                    <span>Нет</span>
                   </label>
                 </li>
               </ul>
@@ -263,11 +263,17 @@
             <li class="sort-item">
               <button class="sort-button sort-button-top">
                 <span class="visually-hidden">По возрастанию</span>
+                <svg class="sort-icon" width="12" height="10" viewBox="0 0 12 10" fill="#000" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m6 0 5.5 10H.5"/>
+                </svg>
               </button>
             </li>
             <li class="sort-item">
               <button class="sort-button sort-button-bottom">
                 <span class="visually-hidden">По убыванию</span>
+                <svg class="sort-icon" width="12" height="10" viewBox="0 0 12 10" fill="#000" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 10 .5 0h11"/>
+                </svg>
               </button>
             </li>
           </ul>
@@ -327,11 +333,11 @@
           </div>
 
           <ul class="page-control-pagination reset-list">
-            <li class="pagination-item pagination-item-back">
-              <a class="pagination-link pagination-link-back" href="#">Назад</a>
+            <li class="pagination-item-back">
+              <a class="pagination-link-back pagination-link-disabled">Назад</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">1</a>
+              <a class="pagination-link pagination-link-active" href="#">1</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">2</a>
@@ -345,8 +351,8 @@
             <li class="pagination-item">
               <a class="pagination-link" href="#">15</a>
             </li>
-            <li class="pagination-item pagination-item-forward">
-              <a class="pagination-link pagination-link-forward" href="#">Вперёд</a>
+            <li class="pagination-item-forward">
+              <a class="pagination-link-forward" href="#">Вперёд</a>
             </li>
           </ul>
         </section>
