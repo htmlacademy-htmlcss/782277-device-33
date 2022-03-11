@@ -414,22 +414,23 @@ body {
 
 /* popover - для корзины с товарами */
 
-/* .popover-close - использовать для закрытия поповера */
-.popover-close {
-  display: none;
-}
-
 .popover-cart {
   z-index: 1;
   position: absolute;
   top: 42px;
   right: -78px;
+  display: none;
   width: 320px;
   min-height: 300px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   background-color: #000000;
+}
+
+/* .popover-open - использовать для открытия поповера */
+.popover-open {
+  display: block;
 }
 
 .popover-cart::before {
@@ -2158,7 +2159,7 @@ body {
   border-radius: 50%;
 }
 
-/* .catalog-item-new использовать для добавления лейбла new для карточки товара */
+/* .catalog-item-new - использовать для добавления лейбла new для карточки товара */
 .catalog-item-new::after {
   content: "New";
 }
@@ -2388,15 +2389,15 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
 }
 
-/* .modal-close - использовать для закрытия модального окна */
-.modal-close {
-  display: none;
+/* .modal-open - использовать для открытия модального окна */
+.modal-open {
+  display: flex;
 }
 
 .modal {
