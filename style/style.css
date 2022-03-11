@@ -247,6 +247,7 @@ body {
 
 .search-form-input {
   width: 357px;
+  min-height: 100%;
   padding: 8px 46px;
   font: inherit;
   color: #000000;
@@ -1152,7 +1153,7 @@ body {
   left: 0;
   content: "";
   width: 125px;
-  min-height: 100px;
+  min-height: 100%;
   background-color: #ffe17f;
   background-image: url("../images/icon/delivery-car.svg");
   background-repeat: no-repeat;
@@ -1181,7 +1182,7 @@ body {
   right: 0;
   display: flex;
   width: 125px;
-  height: 100px;
+  min-height: 100%;
 }
 
 .delivery-tooltip-button {
@@ -2289,6 +2290,7 @@ body {
 .page-control-pagination {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   width: 760px;
   min-height: 71px;
   margin: 0 auto 78px;
